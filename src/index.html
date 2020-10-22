@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<h1>{{title}}</h1>
+
+<div class="podcast-list">
+{%- for item in podcastData.channel.item -%}
+    <div class="podcast-card">
+        <a href="{{item.link}}">{{ item.title }}</a>
+        <p class="podcast-pub-date">{{item.pubDate}}</p>
+    </div>
+{%- endfor -%}
+</div>

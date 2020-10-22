@@ -1,0 +1,17 @@
+---
+eleventyComputed:
+    title: "{{ podcastData.channel.title }}"
+    summary: "{{ podcastData.channel.description }}"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>  
+        {{ content | safe }}
+        
+        <script></script>
+    </body>
+</html>
