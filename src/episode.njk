@@ -15,7 +15,7 @@ permalink: "episode/{{ episode['itunes:episode'] }}/"
     <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
 </div>
 
-<audio id="player" controls>
+<audio id="player" preload="auto" controls>
   <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
 </audio>
 
@@ -25,7 +25,7 @@ permalink: "episode/{{ episode['itunes:episode'] }}/"
 
 <script>
     var player = new Plyr('#player', {
-        controls: [ 'progress', 'current-time', 'mute', 'volume', 'settings'],
+        controls: [ 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings'],
         speed: { selected: 1, options: [ 1, 1.5, 2] }
     });
 </script>
