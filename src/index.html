@@ -28,9 +28,4 @@ pagination:
     </div>
 </div>
 
-<script>
-    var player = new Plyr('#player', {
-        controls: [ 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings'],
-        speed: { selected: 1, options: [ 1, 1.5, 2] }
-    });
-</script>
+{% include 'audioPlayerScript.njk' %}
