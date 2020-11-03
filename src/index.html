@@ -1,13 +1,31 @@
 ---
 layout: base.njk
+pagination:
+    data: podcastData.channel.item
+    size: 1
+    alias: episode
 ---
 <h1>{{title}}</h1>
 
-<div class="podcast-list">
-{%- for episode in podcastData.channel.item -%}
-    <div class="podcast-card">
-        <a href=" {{ '/episode/' + episode['itunes:episode'] | url}} ">{{ episode.title }}</a>
-        <p class="podcast-pub-date">{{episode.pubDate}}</p>
+<h2>Latest Episode</h2>
+<div class="podcast-latest-container">
+    <h3>{{ episode.title }}</h3>
+    <div class="episode-date">{{ episode.pubDate }}</div>
+
+    <div class="episode-duration-container">
+        <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
     </div>
-{%- endfor -%}
+
+    <audio id="player" preload="auto" controls>
+    <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
+    </audio>
+
+    <div class="description">
+        <details>
+            <summary>Sources</summary>
+            {{ episode.description | safe }}
+        </details>
+    </div>
 </div>
+
+{% include 'audioPlayerScript.njk' %}
