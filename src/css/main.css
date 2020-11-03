@@ -9,3 +9,7 @@
 .subscription-icon {
     width: 80px;
 }
+
+.hidden {
+    display: none;
+}
