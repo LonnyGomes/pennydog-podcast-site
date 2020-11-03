@@ -1,0 +1,31 @@
+---
+layout: base.njk
+pagination:
+    data: podcastData.channel.item
+    size: 1
+    alias: episode
+permalink: "episode/{{ episode['itunes:episode'] }}/"
+---
+
+<h1>{{ episode.title }}</h1>
+
+<div class="episode-date">{{ episode.pubDate }}</div>
+
+<div class="episode-duration-container">
+    <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
+</div>
+
+<audio id="player" preload="auto" controls>
+  <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
+</audio>
+
+<div class="description">
+    {{ episode.description | safe }}
+</div>
+
+<script>
+    var player = new Plyr('#player', {
+        controls: [ 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings'],
+        speed: { selected: 1, options: [ 1, 1.5, 2] }
+    });
+</script>
