@@ -25,6 +25,7 @@ permalink: "episode/{{ episode['itunes:episode'] }}/"
 
 <script>
     var player = new Plyr('#player', {
-        title: '{{ podcastData.channel.title }}'
+        controls: [ 'progress', 'current-time', 'mute', 'volume', 'settings'],
+        speed: { selected: 1, options: [ 1, 1.5, 2] }
     });
 </script>
