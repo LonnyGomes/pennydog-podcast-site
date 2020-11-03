@@ -9,3 +9,11 @@
 .subscription-icon {
     width: 80px;
 }
+
+.hidden {
+    display: none;
+}
+
+.contact-fb-logo {
+    width: 30px;
+}
