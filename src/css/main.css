@@ -1,3 +1,11 @@
 .menu {
     display: flex;
 }
+
+.subscription-options {
+    display: flex;
+}
+
+.subscription-icon {
+    width: 80px;
+}
