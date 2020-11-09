@@ -39,6 +39,7 @@ h1,h2,h3,h4 {
     font-size: 2rem;
     color: var(--font-clr-body-light);
     font-family: var(--font-logo);
+    text-decoration: none;
 }
 
 .subscription-options {
