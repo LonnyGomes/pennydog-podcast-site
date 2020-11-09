@@ -95,6 +95,48 @@ h1,h2,h3,h4 {
     font-family: var(--font-header);
 }
 
+/* episodes list */
+
+.episodes-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podcast-card {
+    display: flex;
+}
+
+.podcast-card-date {
+    margin: 5px 30px 5px 0px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.podcast-card-date .month,.year {
+    font-size: 1.2rem;
+}
+
+.podcast-card-date .day {
+    font-size: 2rem;
+}
+
+.podcast-card-metadata {
+    display: flex;
+    flex-direction: column;
+}
+
+.podcast-card-metadata-title {
+    font-size: 1.3rem;
+    color: var(--primary-clr);
+    font-family: var(--font-header);
+    text-decoration: none;
+}
+
+.podcast-card-metadata-summary {
+    max-width: 600px;
+}
+
 .subscription-options {
     display: flex;
 }
