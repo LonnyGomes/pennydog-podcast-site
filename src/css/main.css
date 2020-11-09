@@ -1,10 +1,17 @@
 :root {
+    /* colors */
+    --primary-clr: #427FBC;
+    --font-clr-body-light: #FFFFFF;
+
+    /* fonts */
     --font-header: 'Big Shoulders Inline Text', cursive;
     --font-logo: 'Satisfy', cursive; 
     --font-body: 'Archivo', sans-serif;
 }
 
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: var(--font-body);
 }
 
@@ -14,6 +21,24 @@ h1,h2,h3,h4 {
 
 .menu {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-clr);
+    padding: 10px 15px;
+}
+
+.menu-link {
+    color: var(--font-clr-body-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: var(--font-header);
+    padding: 0px 7px;
+}
+
+.logo-txt {
+    font-size: 2rem;
+    color: var(--font-clr-body-light);
+    font-family: var(--font-logo);
 }
 
 .subscription-options {
