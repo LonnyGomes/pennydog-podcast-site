@@ -2,6 +2,7 @@
     /* colors */
     --primary-clr: #427FBC;
     --font-clr-body-light: #FFFFFF;
+    --font-clr-body-dark: #1C1C1C;
 
     /* fonts */
     --font-header: 'Big Shoulders Inline Text', cursive;
@@ -12,6 +13,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    color: var(--font-clr-body-dark);
     font-family: var(--font-body);
 }
 
@@ -40,6 +42,57 @@ h1,h2,h3,h4 {
     color: var(--font-clr-body-light);
     font-family: var(--font-logo);
     text-decoration: none;
+}
+
+.podcast-latest-container {
+    /* player styles */
+    --plyr-color-main: var(--font-clr-body-light);
+    --plyr-audio-control-color: var(--font-clr-body-light);
+    --plyr-audio-control-color-hover: var(--primary-clr);
+    --plyr-audio-controls-background: var(--primary-clr);
+
+    display: flex;
+    color: var(--font-clr-body-light);
+    padding: 15px 40px;
+    background-color: var(--primary-clr);
+}
+
+.podcast-latest-container h1 {
+    text-align: center;
+    font-family: var(--font-logo);
+}
+
+.podcast-latest-container h2 {
+    text-align: center;
+    font-family: var(--font-header);
+}
+
+.episode-metadata {
+    display: flex;
+    justify-content: center;
+}
+
+.episode-metadata-divider {
+    padding: 0px 10px;
+}
+
+.latest-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description-txt {
+    max-width: 600px;
+}
+
+.description-txt p {
+    margin: 2px;
+}
+
+.description-txt a {
+    color: var(--primary-clr);
+    font-family: var(--font-header);
 }
 
 .subscription-options {
