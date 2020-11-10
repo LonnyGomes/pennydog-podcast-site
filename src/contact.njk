@@ -2,24 +2,31 @@
 layout: base.njk
 ---
 
-<h1>Contact us</h1>
-
-Follow us on  Facebook <a href="https://www.facebook.com/pages/category/Podcast/PennyDog-Podcast-101788281712320/"><img class="contact-fb-logo" src="{{ '/images/facebook-logo.png' | url }}" alt="Facebook logo" srcset=""></a>
-
-<form name="contact" method="POST" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
-  <p class="hidden">
-    <label>Not for real folk: <input name="bot-field" /></label>
-  </p>
-  <p>
-    <label>Email: <input type="text" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-
-  <div data-netlify-recaptcha="true"></div>
+<div class="contact-container">
+  <h1>Contact us</h1>
   
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+  <span>Reachout to us on <a href="https://www.facebook.com/pages/category/Podcast/PennyDog-Podcast-101788281712320/"><img class="contact-fb-logo" src="{{ '/images/facebook-logo.png' | url }}" alt="Facebook" srcset=""></a></span>
+
+  <span class="contact-label">OR send us a message</span>
+  
+  <form class="contact-form" name="contact" method="POST" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
+    <p class="hidden">
+      <label>Not for real folk: <input name="bot-field" /></label>
+    </p>
+    <p>
+      <label for="email">Email:</label><br>
+      <input type="text" size="30" name="email" />
+    </p>
+
+    <p>
+      <label for="messasage">Message:</label><br>
+      <textarea name="message" rows="5" cols="60"></textarea>
+    </p>
+  
+    <div data-netlify-recaptcha="true"></div>
+    
+    <p>
+      <button class="btn" type="submit">Send</button>
+    </p>
+  </form>
+</div>
