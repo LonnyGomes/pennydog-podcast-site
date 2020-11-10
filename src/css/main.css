@@ -77,6 +77,10 @@ h1,h2,h3,h4 {
     padding: 0px 10px;
 }
 
+.episode-duration {
+    font-style: italic;
+}
+
 .latest-description {
     display: flex;
     flex-direction: column;
@@ -106,20 +110,23 @@ h1,h2,h3,h4 {
 
 .podcast-card {
     display: flex;
+    margin-bottom: 15px;
 }
 
 .podcast-card-date {
-    margin: 5px 30px 5px 0px;
+    margin: 0px 30px 5px 0px;
     padding: 5px 10px;
     text-align: center;
 }
 
 .podcast-card-date .month,.year {
     font-size: 1.2rem;
+    font-style: italic;
 }
 
 .podcast-card-date .day {
     font-size: 2rem;
+    font-family: var(--font-header);
 }
 
 .podcast-card-metadata {
