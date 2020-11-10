@@ -137,6 +137,21 @@ h1,h2,h3,h4 {
     max-width: 600px;
 }
 
+.subscription-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscription-service {
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.subscription-label {
+    font-family: var(--font-header);
+}
+
 .subscription-options {
     display: flex;
 }
