@@ -5,9 +5,9 @@
     --font-clr-body-dark: #1C1C1C;
 
     /* fonts */
-    --font-header: 'Big Shoulders Inline Text', cursive;
+    --font-header: 'Oswald', sans-serif;
     --font-logo: 'Satisfy', cursive; 
-    --font-body: 'Archivo', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 }
 
 body {
