@@ -53,6 +53,7 @@ h1,h2,h3,h4 {
     --plyr-audio-controls-background: var(--primary-clr);
 
     display: flex;
+    justify-content: center;
     color: var(--font-clr-body-light);
     padding: 15px 40px;
     background-color: var(--primary-clr);
