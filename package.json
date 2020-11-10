@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Pennydog Podcast Website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "luxon": "^1.25.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "xml2json": "^0.12.0"

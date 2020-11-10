@@ -5,25 +5,34 @@ pagination:
     size: 1
     alias: episode
 ---
-<h1>Latest Episode</h1>
 
 <div class="podcast-latest-container">
-    <h2>{{ episode.title }}</h2>
-    <div class="episode-date">{{ episode.pubDate }}</div>
+    <img src="{{ '/images/pennydog-logo-main.png' | url}}" alt="" srcset="">
+    <div class="latest-episode">
+        <h1>Latest Episode</h1>
+        <h2>{{ episode.title }}</h2>
 
-    <div class="episode-duration-container">
-        <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
+        <div class="episode-metadata">
+            <div class="episode-date">{{ episode.pubDate | fullDate }}</div>
+            <div class="episode-metadata-divider">|</div>
+            <div class="episode-duration-container">
+                <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
+            </div>
+        </div>
+    
+    
+        <audio id="player" preload="auto" controls>
+            <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
+        </audio>
+    
     </div>
+</div>
 
-    <audio id="player" preload="auto" controls>
-    <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
-    </audio>
+<div class="latest-description">
+    <h2>Description</h2>
 
-    <div class="description">
-        <details>
-            <summary>Sources</summary>
-            {{ episode.description | safe }}
-        </details>
+    <div class="description-txt">
+        {{ episode.description | safe }}
     </div>
 </div>
 

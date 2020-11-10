@@ -2,14 +2,23 @@
 layout: base.njk
 ---
 
-<h1>Episode List</h1>
-
-<div class="podcast-list">
-{%- for episode in podcastData.channel.item -%}
-    <div class="podcast-card">
-        <a href=" {{ '/episode/' + episode['itunes:episode'] | url}} ">{{ episode.title }}</a>
-        <span class="episode-duration">({{ episode['itunes:duration'] }})</span>
-        <p class="podcast-pub-date">{{episode.pubDate}}</p>
+<div class="episodes-list-container">
+    <h1>Episode List</h1>
+    
+    <div class="episodes-list">
+    {%- for episode in podcastData.channel.item -%}
+        <div class="podcast-card">
+            <div class="podcast-card-date">
+                <div class="month">{{ episode.pubDate | dateMonth }}</div>
+                <div class="day">{{ episode.pubDate | dateDay }}</div>
+                <div class="year">{{ episode.pubDate | dateYear }}</div>
+            </div>
+            <div class="podcast-card-metadata">
+                <a class="podcast-card-metadata-title" href=" {{ '/episode/' + episode['itunes:episode'] | url}} ">{{ episode.title }}</a>
+                <div class="episode-duration">Duration: {{ episode['itunes:duration'] }}</div>
+                <p class="podcast-card-metadata-summary">{{episode['itunes:subtitle']}}</p>
+            </div>
+        </div>
+    {%- endfor -%}
     </div>
-{%- endfor -%}
 </div>

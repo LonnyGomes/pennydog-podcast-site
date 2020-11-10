@@ -1,7 +1,9 @@
 <div class="menu">
-    <em>{{title}}</em>
-    <a href="{{ '/' | url }}" class="menu-link">Home</a>
-    <a href="{{ '/episodes' | url }}" class="menu-link">Episodes</a>
-    <a href="{{ '/subscribe' | url }}" class="menu-link">Subscribe</a>
-    <a href="{{ '/contact' | url }}" class="menu-link">Contact</a>
+    <a href="{{ '/' | url }}" class="logo-txt">{{title}}</a>
+
+    <div class="menu-links">
+        <a href="{{ '/episodes' | url }}" class="menu-link">Episodes</a>
+        <a href="{{ '/subscribe' | url }}" class="menu-link">Subscribe</a>
+        <a href="{{ '/contact' | url }}" class="menu-link">Contact</a>
+    </div>
 </div>

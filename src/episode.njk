@@ -7,20 +7,32 @@ pagination:
 permalink: "episode/{{ episode['itunes:episode'] }}/"
 ---
 
-<h1>{{ episode.title }}</h1>
-
-<div class="episode-date">{{ episode.pubDate }}</div>
-
-<div class="episode-duration-container">
-    <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
+<div class="podcast-latest-container">
+    <img src="{{ '/images/pennydog-logo-main.png' | url}}" alt="" srcset="">
+    <div class="podcast-metadata">
+        <h1>{{ episode.title }}</h1>
+        
+        <div class="episode-metadata">
+            <div class="episode-date">{{ episode.pubDate | fullDate }}</div>
+            <div class="episode-metadata-divider">|</div>
+            <div class="episode-duration-container">
+                <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>
+            </div>
+        </div>
+        
+        <audio id="player" preload="auto" controls>
+          <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
+        </audio>
+    </div>
+    
 </div>
 
-<audio id="player" preload="auto" controls>
-  <source src="{{ episode.enclosure.url }}" type="audio/mpeg" />
-</audio>
+<div class="latest-description">
+    <h2>Description</h2>
 
-<div class="description">
-    {{ episode.description | safe }}
+    <div class="description-txt">
+        {{ episode.description | safe }}
+    </div>
 </div>
 
 {% include 'audioPlayerScript.njk' %}
