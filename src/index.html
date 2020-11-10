@@ -13,7 +13,7 @@ pagination:
         <h2>{{ episode.title }}</h2>
 
         <div class="episode-metadata">
-            <div class="episode-date">{{ episode.pubDate }}</div>
+            <div class="episode-date">{{ episode.pubDate | fullDate }}</div>
             <div class="episode-metadata-divider">|</div>
             <div class="episode-duration-container">
                 <span class="episode-label">Duration:</span><span class="episode-duration">{{ episode['itunes:duration'] }}</span>

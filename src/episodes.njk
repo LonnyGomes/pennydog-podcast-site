@@ -9,9 +9,9 @@ layout: base.njk
     {%- for episode in podcastData.channel.item -%}
         <div class="podcast-card">
             <div class="podcast-card-date">
-                <div class="month">Nov</div>
-                <div class="day">8</div>
-                <div class="year">2020</div>
+                <div class="month">{{ episode.pubDate | dateMonth }}</div>
+                <div class="day">{{ episode.pubDate | dateDay }}</div>
+                <div class="year">{{ episode.pubDate | dateYear }}</div>
             </div>
             <div class="podcast-card-metadata">
                 <a class="podcast-card-metadata-title" href=" {{ '/episode/' + episode['itunes:episode'] | url}} ">{{ episode.title }}</a>
