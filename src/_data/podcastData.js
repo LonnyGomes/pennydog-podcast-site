@@ -45,7 +45,7 @@ module.exports = async () => {
         const jsonObj = JSON.parse(jsonStr);
         //console.log('to json -> %s', json);
 
-        //await saveFile(outputFile, JSON.stringify(jsonObj.rss));
+        await saveFile(outputFile, JSON.stringify(jsonObj.rss));
 
         json = jsonObj.rss;
     } catch (error) {
